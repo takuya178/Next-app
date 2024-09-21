@@ -13,21 +13,19 @@ jobs:
 
     steps:
       - name: Checkout the source
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@v4
         with:
           show-progress: false
           submodules: recursive
-
-      - name: Setup pnpm
-        uses: actions/checkout@v2
-        with:
-          standalone: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
