@@ -2,17 +2,32 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### バージョン管理
+このプロジェクトでは、Voltaを使用しNode.Jsのバージョン管理を行う。またパッケージ管理ツールにはpnpmを採用している。
+- Voltaの[公式ドキュメント](https://docs.volta.sh/guide/)
+- pnpmの[公式ドキュメント](https://pnpm.io/ja/)
+- Voltaの[インストール方法](https://isub.co.jp/%E3%80%90%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%80%91/%E3%80%90node-js%E3%80%91%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92volta%E3%81%AB%E7%A7%BB%E8%A1%8C%E3%81%99%E3%82%8B/)
+- Node.Jsとpnpmのバージョン指定
 ```
+node -v
+v22.8.0
+
+pnpm -v
+9.11.0
+
+// インストール方法
+volta install node@22.8.0
+volta install pnpm@9.11.0
+```
+
+### プロジェクトの立ち上げ
+- プロジェクトのディレクトリに移動し、下記コマンドを入力
+```
+pnpm i
+
+pnpm run dev
+```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
